@@ -10,22 +10,7 @@ import {
 } from '../constants/ActionTypes';
 import { column } from './column';
 
-const initialState = {
-    '0': {
-        id: '0',
-        title: 'First Column',
-        cards: ['0', '1'],
-        showEditor: false
-    },
-    '1': {
-        id: '1',
-        title: 'Not First Column',
-        cards: ['2', '3'],
-        showEditor: false
-    }
-};
-
-const byId = (state = initialState, action) => {
+const byId = (state = {}, action) => {
     switch (action.type) {
         case ADD_COLUMN:
         case ADD_CARD:
@@ -42,7 +27,7 @@ const byId = (state = initialState, action) => {
     }
 };
 
-const allIds = (state = ['0', '1'], action) => {
+const allIds = (state = [], action) => {
     switch (action.type) {
         case ADD_COLUMN:
             return [...state, action.payload.columnId];
