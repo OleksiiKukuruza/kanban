@@ -1,0 +1,14 @@
+.column-container {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5px;
+  height: 100%;
+
+  &:first-child {
+    margin-left: 10px;
+  }
+
+  &:last-child {
+    margin-right: 10px;
+  }
+}

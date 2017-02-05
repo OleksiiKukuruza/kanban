@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.button {
+  &-general {
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+    color: gray;
+    outline: none;
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &-primary {
+    outline: none;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #61BD4F 0, #5AAC44 100%);
+
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to bottom, #61BD4F 0, #478e41 100%);
+    }
+  }
+}

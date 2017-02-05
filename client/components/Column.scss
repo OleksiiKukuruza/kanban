@@ -1,0 +1,36 @@
+.column {
+  font-size: 14px;
+  background-color: #E2E4E6;
+  margin: 10px 0;
+  border-radius: 3px;
+  width: 250px;
+  max-height: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+
+  &_header {
+    padding: 10px;
+    font-weight: bold;
+    color: #4d4d4d;
+    cursor: move;
+
+    &__button-remove {
+      float: right;
+    }
+  }
+
+  &_footer {
+    color: grey;
+  }
+}
+
+.add-card-button {
+  padding: 10px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+    cursor: pointer;
+    color: #4d4d4d;
+  }
+}
