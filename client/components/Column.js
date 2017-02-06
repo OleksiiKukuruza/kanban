@@ -33,7 +33,7 @@ export class Column extends Component {
                     ? <CardList
                         cards={column.cards}
                         columnId={column.id}
-                        removeCard={actions.removeCard}
+                        removeCard={(cardId) => actions.removeCard(column.id, cardId)}
                         insertCard={(sourceCardId, index) => actions.insertCard(column.id, sourceCardId, index)}
                         changeColor={actions.changeColor}
                     /> : ''}
