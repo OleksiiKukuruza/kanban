@@ -25,9 +25,9 @@ const cardTarget = {
         return props.card.id !== monitor.getItem().sourceCardId;
     },
     drop(props, monitor) {
-        const {insertCard, removeCard} = props;
+        const {insertCard, removeDraggedCard} = props;
         const {sourceCardId, sourceColumnId} = monitor.getItem();
-        removeCard(sourceColumnId, sourceCardId);
+        removeDraggedCard(sourceColumnId, sourceCardId);
         insertCard(sourceCardId);
     }
 };
@@ -43,6 +43,7 @@ export class Card extends Component {
     static propTypes = {
         card: PropTypes.object.isRequired,
         removeCard: PropTypes.func.isRequired,
+        removeDraggedCard: PropTypes.func.isRequired,
         changeColor: PropTypes.func.isRequired
     };
 

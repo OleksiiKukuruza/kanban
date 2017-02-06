@@ -11,7 +11,8 @@ export const CardList = ({cards, columnId, removeCard, insertCard, changeColor})
                 columnId={columnId}
                 changeColor={(color) => changeColor(card.id, color)}
                 insertCard={(sourceCardId) => insertCard(sourceCardId, index)}
-                removeCard={() => removeCard(card.id)}
+                removeDraggedCard={removeCard}
+                removeCard={() => removeCard(columnId, card.id)}
             />
         ))}
     </div>
